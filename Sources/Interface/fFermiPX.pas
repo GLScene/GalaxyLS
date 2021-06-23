@@ -48,7 +48,9 @@ uses
   GLS.BaseClasses,
   GLS.SceneViewer,
   GLS.VectorTypes,
-  GLS.Color, GLS.Graph, GLS.SimpleNavigation;
+  GLS.Color,
+  GLS.Graph,
+  GLS.SimpleNavigation;
 
 
 type
@@ -113,9 +115,7 @@ type
     procedure GLSceneViewer1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 var

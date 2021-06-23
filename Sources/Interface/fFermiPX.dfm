@@ -55,7 +55,7 @@ object FormScene: TFormScene
       506)
     object CheckListBox1: TCheckListBox
       Left = 17
-      Top = 8
+      Top = 0
       Width = 104
       Height = 113
       Anchors = [akTop, akRight]
@@ -66,13 +66,13 @@ object FormScene: TFormScene
       Font.Style = []
       ItemHeight = 15
       Items.Strings = (
+        '"O"'
         '"A"'
         '"B"'
         '"F"'
         '"G"'
         '"K"'
-        '"M"'
-        '"O"')
+        '"M"')
       ParentFont = False
       ParentShowHint = False
       ShowHint = False

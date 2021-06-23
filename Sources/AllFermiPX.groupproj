@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7F509C82-CBD6-4ABA-B830-F919FCEA7C77}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FermiPX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FermiPC.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FermiPX">
+        <MSBuild Projects="FermiPX.dproj"/>
+    </Target>
+    <Target Name="FermiPX:Clean">
+        <MSBuild Projects="FermiPX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FermiPX:Make">
+        <MSBuild Projects="FermiPX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FermiPC">
+        <MSBuild Projects="FermiPC.cbproj"/>
+    </Target>
+    <Target Name="FermiPC:Clean">
+        <MSBuild Projects="FermiPC.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FermiPC:Make">
+        <MSBuild Projects="FermiPC.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FermiPX;FermiPC"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FermiPX:Clean;FermiPC:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FermiPX:Make;FermiPC:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
