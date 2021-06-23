@@ -8,5 +8,5 @@ The simulator is tightly related to the formation and evolution of various spect
 and its exoplanetospheres in space and time. 
 It's interface designed with Embarcadero RAD Studio's VCL library and rendered 
 using GLScene graphic engine with advanced visual components and programming tools.
-Common requirements: Windows 32/64 bits OS with OpenGL support 
+Common requirements: Windows 32/64 bits OS with OpenGL support. 
 GLS Team
