@@ -111,9 +111,14 @@ type
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     GLSimpleNavigation1: TGLSimpleNavigation;
     GLXYZGrid1: TGLXYZGrid;
+    ools1: TMenuItem;
+    Help1: TMenuItem;
+    About1: TMenuItem;
+    Options1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure GLSceneViewer1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure Options1Click(Sender: TObject);
   private
   public
   end;
@@ -174,6 +179,14 @@ procedure TFormScene.GLSceneViewer1MouseDown(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 begin
 	 mx := X; my := Y;
+end;
+
+procedure TFormScene.Options1Click(Sender: TObject);
+begin
+///  if fToolsOptions.Create() then
+  begin
+    ///
+  end;
 end;
 
 end.

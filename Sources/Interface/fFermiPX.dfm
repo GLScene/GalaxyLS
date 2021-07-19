@@ -42,6 +42,7 @@ object FormScene: TFormScene
     Align = alClient
     OnMouseDown = GLSceneViewer1MouseDown
     TabOrder = 1
+    ExplicitLeft = -6
   end
   object PanelRight: TPanel
     Left = 655
@@ -179,6 +180,19 @@ object FormScene: TFormScene
     end
     object Data1: TMenuItem
       Caption = 'Data'
+    end
+    object ools1: TMenuItem
+      Caption = 'Tools'
+      object Options1: TMenuItem
+        Caption = 'Options...'
+        OnClick = Options1Click
+      end
+    end
+    object Help1: TMenuItem
+      Caption = 'Help'
+      object About1: TMenuItem
+        Caption = 'About'
+      end
     end
   end
   object OpenTextFileDialog1: TOpenTextFileDialog
