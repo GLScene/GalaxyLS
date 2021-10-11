@@ -1,71 +1,85 @@
 object FormScene: TFormScene
   Left = 0
   Top = 0
-  Caption = 'Fermi Paradox Simulator'
-  ClientHeight = 525
-  ClientWidth = 793
+  Caption = 'Galaxy Life Scene'
+  ClientHeight = 656
+  ClientWidth = 991
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -14
   Font.Name = 'Tahoma'
   Font.Style = []
   Menu = MainMenu1
-  OldCreateOrder = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 13
+  PixelsPerInch = 120
+  TextHeight = 17
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 506
-    Width = 793
-    Height = 19
+    Top = 633
+    Width = 991
+    Height = 23
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Panels = <
       item
         Text = 'Total points:'
-        Width = 250
+        Width = 313
       end
       item
         Text = 'FPS:'
-        Width = 50
+        Width = 63
       end>
   end
   object GLSceneViewer1: TGLSceneViewer
     Left = 0
     Top = 0
-    Width = 655
-    Height = 506
+    Width = 819
+    Height = 633
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Camera = GLCamera1
     Buffer.BackgroundColor = clBlack
-    FieldOfView = 157.641555786132800000
+    FieldOfView = 162.045455932617200000
     PenAsTouch = False
     Align = alClient
     OnMouseDown = GLSceneViewer1MouseDown
     TabOrder = 1
-    ExplicitLeft = -6
   end
   object PanelRight: TPanel
-    Left = 655
+    Left = 819
     Top = 0
-    Width = 138
-    Height = 506
+    Width = 172
+    Height = 633
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alRight
     TabOrder = 2
     DesignSize = (
-      138
-      506)
+      172
+      633)
     object CheckListBox1: TCheckListBox
-      Left = 17
+      Left = 20
       Top = 0
-      Width = 104
-      Height = 113
+      Width = 130
+      Height = 141
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Anchors = [akTop, akRight]
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 15
+      Font.Height = 19
       Font.Name = 'Tahoma'
       Font.Style = []
-      ItemHeight = 15
+      ItemHeight = 19
       Items.Strings = (
         '"O"'
         '"A"'
@@ -144,16 +158,16 @@ object FormScene: TFormScene
   end
   object GLCadencer1: TGLCadencer
     Scene = GLScene1
-    Left = 240
-    Top = 16
+    Left = 40
+    Top = 112
   end
   object Timer1: TTimer
-    Left = 336
-    Top = 16
+    Left = 368
+    Top = 8
   end
   object MainMenu1: TMainMenu
-    Left = 136
-    Top = 8
+    Left = 368
+    Top = 104
     object mnFile: TMenuItem
       Caption = 'File'
     end
@@ -191,13 +205,14 @@ object FormScene: TFormScene
     object Help1: TMenuItem
       Caption = 'Help'
       object About1: TMenuItem
-        Caption = 'About'
+        Caption = 'About...'
+        OnClick = About1Click
       end
     end
   end
   object OpenTextFileDialog1: TOpenTextFileDialog
-    Left = 432
-    Top = 16
+    Left = 504
+    Top = 8
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -205,17 +220,17 @@ object FormScene: TFormScene
         'Database=C:\Users\dgoni\Documents\Embarcadero\Studio\STARS_DB\DA' +
         'TA\A_Delaunay.sqlite'
       'DriverID=SQLite')
-    Left = 40
-    Top = 72
+    Left = 680
+    Top = 104
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
-    Left = 136
-    Top = 72
+    Left = 512
+    Top = 104
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 40
-    Top = 144
+    Left = 680
+    Top = 8
   end
   object GLSimpleNavigation1: TGLSimpleNavigation
     Form = Owner
@@ -234,7 +249,7 @@ object FormScene: TFormScene
         ShiftState = [ssRight]
         Action = snaMoveAroundTarget
       end>
-    Left = 560
-    Top = 16
+    Left = 184
+    Top = 8
   end
 end

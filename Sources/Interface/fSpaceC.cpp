@@ -8,8 +8,8 @@
 #include <string>
 #pragma hdrstop
 
-#include "fFermiPC.h"
-#include "fFermiPCTable.h"
+#include "fSpaceC.h"
+#include "fTableC.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "GLS.BaseClasses"

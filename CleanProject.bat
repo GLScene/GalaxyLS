@@ -72,7 +72,7 @@ echo             Don't delete some files
 echo ************************************************
 echo _
 
-rem del *.res /s
+del *.res /s
 rem del *.ico /s  - some projects have own icos
 rem del *.cur /s  - cursors
 rem del *.obj /s  - obj models formats

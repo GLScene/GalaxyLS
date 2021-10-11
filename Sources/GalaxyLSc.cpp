@@ -4,8 +4,8 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-USEFORM("Interface\fFermiPCTable.cpp", FormTable);
-USEFORM("Interface\fFermiPC.cpp", FormScene);
+USEFORM("Interface\fTableC.cpp", FormTable);
+USEFORM("Interface\fSpaceC.cpp", FormScene);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {

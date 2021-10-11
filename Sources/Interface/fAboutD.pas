@@ -1,4 +1,4 @@
-unit fFermiPXTable;
+unit fAboutD;
 
 interface
 
@@ -13,16 +13,17 @@ uses
   Vcl.Forms,
   Vcl.Dialogs;
 
+
 type
-  TForm1 = class(TForm)
+  TfrmAbout = class(TForm)
   private
-
+    { Private declarations }
   public
-
+    { Public declarations }
   end;
 
 var
-  Form1: TForm1;
+  frmAbout: TfrmAbout;
 
 implementation
 

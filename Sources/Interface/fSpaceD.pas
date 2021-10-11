@@ -1,4 +1,4 @@
-unit fFermiPX;
+unit fSpaceD;
 
 interface
 
@@ -50,7 +50,11 @@ uses
   GLS.VectorTypes,
   GLS.Color,
   GLS.Graph,
-  GLS.SimpleNavigation;
+  GLS.SimpleNavigation,
+  FireDAC.Phys.SQLiteWrapper.Stat,
+
+  fOptionsD,
+  fAboutD;
 
 
 type
@@ -119,6 +123,7 @@ type
     procedure GLSceneViewer1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure Options1Click(Sender: TObject);
+    procedure About1Click(Sender: TObject);
   private
   public
   end;
@@ -183,10 +188,22 @@ end;
 
 procedure TFormScene.Options1Click(Sender: TObject);
 begin
-///  if fToolsOptions.Create() then
-  begin
-    ///
-  end;
+  with frmOptions.Create(Self) do
+    try
+      ShowModal;
+    finally
+      Free;
+    end;
+end;
+
+procedure TFormScene.About1Click(Sender: TObject);
+begin
+  with TfrmAbout.Create(Self) do
+    try
+      ShowModal;
+    finally
+      Free;
+    end;
 end;
 
 end.

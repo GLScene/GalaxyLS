@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef fFermiPCH
-#define fFermiPCH
+#ifndef fSpaceCH
+#define fSpaceCH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
@@ -44,6 +44,7 @@
 #include "GLS.Mesh.hpp"
 //#include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
 #include "GLS.SimpleNavigation.hpp"
+#include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
 #include <vector>
 //---------------------------------------------------------------------------
 struct DelaunayBase

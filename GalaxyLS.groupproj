@@ -3,10 +3,10 @@
         <ProjectGuid>{7F509C82-CBD6-4ABA-B830-F919FCEA7C77}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="FermiPX.dproj">
+        <Projects Include="Sources\GalaxyLSd.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="FermiPC.cbproj">
+        <Projects Include="Sources\GalaxyLSc.cbproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,32 +17,32 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="FermiPX">
-        <MSBuild Projects="FermiPX.dproj"/>
+    <Target Name="GalaxyLSd">
+        <MSBuild Projects="Sources\GalaxyLSd.dproj"/>
     </Target>
-    <Target Name="FermiPX:Clean">
-        <MSBuild Projects="FermiPX.dproj" Targets="Clean"/>
+    <Target Name="GalaxyLSd:Clean">
+        <MSBuild Projects="Sources\GalaxyLSd.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="FermiPX:Make">
-        <MSBuild Projects="FermiPX.dproj" Targets="Make"/>
+    <Target Name="GalaxyLSd:Make">
+        <MSBuild Projects="Sources\GalaxyLSd.dproj" Targets="Make"/>
     </Target>
-    <Target Name="FermiPC">
-        <MSBuild Projects="FermiPC.cbproj"/>
+    <Target Name="GalaxyLSc">
+        <MSBuild Projects="Sources\GalaxyLSc.cbproj"/>
     </Target>
-    <Target Name="FermiPC:Clean">
-        <MSBuild Projects="FermiPC.cbproj" Targets="Clean"/>
+    <Target Name="GalaxyLSc:Clean">
+        <MSBuild Projects="Sources\GalaxyLSc.cbproj" Targets="Clean"/>
     </Target>
-    <Target Name="FermiPC:Make">
-        <MSBuild Projects="FermiPC.cbproj" Targets="Make"/>
+    <Target Name="GalaxyLSc:Make">
+        <MSBuild Projects="Sources\GalaxyLSc.cbproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="FermiPX;FermiPC"/>
+        <CallTarget Targets="GalaxyLSd;GalaxyLSc"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="FermiPX:Clean;FermiPC:Clean"/>
+        <CallTarget Targets="GalaxyLSd:Clean;GalaxyLSc:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="FermiPX:Make;FermiPC:Make"/>
+        <CallTarget Targets="GalaxyLSd:Make;GalaxyLSc:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

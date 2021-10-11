@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef fFermiPCTableH
-#define fFermiPCTableH
+#ifndef fTableCH
+#define fTableCH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
@@ -37,6 +37,7 @@
 #include <FireDAC.Stan.Pool.hpp>
 #include <FireDAC.UI.Intf.hpp>
 #include <FireDAC.VCLUI.Wait.hpp>
+#include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
 //#include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
 //---------------------------------------------------------------------------
 class TFormTable : public TForm
